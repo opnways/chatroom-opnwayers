@@ -1,13 +1,74 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <style>
-      /* Email styles need to be inline */
-    </style>
-  </head>
 
-  <body>
- <h1>Chat Room</h1>
-  </body>
-</html>
+<!-- Header-->
+<h2 class="ui center aligned icon header">
+  <i class="circular users icon"></i>
+  Friends
+</h2>
+
+
+<!-- Lateral-->
+<div class="ui two column grid">
+  <div class="twelve wide column">
+    <div class="ui fluid raised card chatbox">
+      <div class="content">
+        <!-- Feed-->
+        <div class="ui feed">
+        <h4>Followers activity</h4>
+          <!-- 1st feed -->
+          <div class="event">
+            <div class="label">
+              <img src="/images/avatar/small/jenny.jpg">
+            </div>
+            <div class="content">
+              <div class="date">
+                3 days ago
+              </div>
+              <div class="summary">
+                You added <a>Jenny Hess</a> to your <a>coworker</a> group.
+              </div>
+            </div>
+          </div>
+          <!-- 2nd feed-->
+          <div class="event">
+            <div class="label">
+              <img src="/images/avatar/small/jenny.jpg">
+            </div>
+            <div class="content">
+              <div class="date">
+                3 days ago
+              </div>
+              <div class="summary">
+                You added <a>Jenny Hess</a> to your <a>coworker</a> group.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="four wide column ">
+      <!--  Menu-->
+      <div class="ui vertical menu chatbox">
+        <a class="teal item">
+          Inbox
+          <div class="ui teal left pointing label">1</div>
+        </a>
+        <a class="item active">
+          Spam
+          <div class="ui label">51</div>
+        </a>
+        <a class="item">
+          Updates
+          <div class="ui label">1</div>
+        </a>
+        <div class="item">
+          <div class="ui transparent icon input">
+            <input type="text" placeholder="Search mail...">
+            <i class="search icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
