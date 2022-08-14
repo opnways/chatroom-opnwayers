@@ -1,0 +1,13 @@
+<div class="event">
+    <div class="label">
+              <img src="/images/avatar/small/jenny.jpg">
+    </div>
+        <div class="content">
+            <div class="date">
+               <em class="nickname"><%= message.user.username %></em> <%= time_ago_in_words(((message.created_at)).to_time.to_i)  %>
+            </div>
+            <div class="summary">
+               <%= message.body %>
+            </div>
+    </div>
+</div>
