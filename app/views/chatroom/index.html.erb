@@ -15,23 +15,7 @@
         <div class="ui feed">
         <h4>Followers activity</h4>
           <!-- 1st feed -->
-          <% @messages.each do |message| %>
-       
-          
-          <div class="event">
-            <div class="label">
-              <img src="/images/avatar/small/jenny.jpg">
-            </div>
-            <div class="content">
-              <div class="date">
-               <em class="nickname"><%= message.user.username %></em> <%= message.created_at %>
-              </div>
-              <div class="summary">
-               <%= message.body %>
-              </div>
-            </div>
-          </div>
-          <% end %>
+          <%= render @messages %>
           <!-- 2nd feed-->
          
         </div>
