@@ -10,8 +10,8 @@ class ApplicationController < ActionController::Base
     end
 
     def require_user
-        if !logged_i?
-            flash[:error] = "Loggin fallido"
+        if !logged_in?
+            flash[:error] = "Login Requerido"
             redirect_to login_path
         end
     end
