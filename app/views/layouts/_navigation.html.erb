@@ -9,12 +9,17 @@
           <div class="ui dropdown item">
             Account <i class="dropdown icon"></i>
             <div class="menu">
-              <a class="item">Log out</a>
-              <a class="item">Log In</a>
+            <% if logged_in? %>
+              <%= link_to "Log Out", logout_path, method: :delete, class: "item"  %>
+            <%  else %>
+              <%= link_to "Log in", login_path, class: "item" %>
               <a class="item">Sign Up</a>
+              <% end %>
             </div>
           </div>
-          <div class="item">
-              <div class="ui primary button">Sign Up</div>
-          </div>
+          <% if !logged_in? %>
+            <div class="item">
+              <%= link_to "Sign Up", login_path, class: "ui primary button" %>
+            </div>
+          <% end %>
         </div>
