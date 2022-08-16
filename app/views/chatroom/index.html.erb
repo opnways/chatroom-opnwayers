@@ -10,26 +10,26 @@
 <div class="ui two column grid">
   <div class="twelve wide column">
     <div class="ui fluid raised card chatbox">
-      <div class="content">
+      <div class="content" id="messages">
         <!-- Feed-->
-        <div class="ui feed">
-        <h4>Followers activity</h4>
-          <!-- 1st feed -->
+        <div class="ui feed" id="message-container">
+       
+          <!-- feed -->
           <%= render @messages %>
-          <!-- 2nd feed-->
+        
          
         </div>
       </div>
       <div class="extra content">
-        <form class="ui reply form">
+      <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path, remote: true) do | f | %>
           <div class="field">
             <div class="ui fluid icon input">
-              <input type="text" placeholder="Type text...">
-              <i class="bordered inverted blue edit icon"></i> 
+              <%=  f.text_field :body %>
+              <%= f.button '<i class="bordered inverted blue edit icon"></i>'.html_safe %>
             </div>
           </div>
-        </form>
-      </div>
+        <% end %>
+      </div> 
 
     </div>
   </div>
